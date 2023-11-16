@@ -72,7 +72,9 @@ export default function From() {
                 </section>
                 {/* ボタンのUI */}
                 <div className="font-bold text-2xl flex justify-center">
-                    <button className="bg-[#00ff00] px-8 my-16 rounded-md flex items-center">next<span className="text-base ml-1">&gt;</span></button>
+                    <button className="bg-[#00ff00] px-8 my-16 rounded-md flex items-center" onClick={()=>{
+                        console.log(Acomenu);
+                    }}>next<span className="text-base ml-1">&gt;</span></button>
                 </div>
             </div>
         )
@@ -110,7 +112,9 @@ export default function From() {
                 </section>
                 {/* ボタン */}
                 <div className="font-bold text-2xl flex justify-center">
-                    <button className="bg-[#00ff00] px-8 my-16 rounded-md flex items-center">next<span className="text-base ml-1">&gt;</span></button>
+                    <button className="bg-[#00ff00] px-8 my-16 rounded-md flex items-center" onClick={()=>{
+                        console.log(inputText);
+                    }}>next<span className="text-base ml-1">&gt;</span></button>
                 </div>
             </div>
         )
@@ -157,7 +161,11 @@ export default function From() {
             </div>
 
             <div className="font-bold text-2xl flex justify-center">
-                <button className="bg-[#ff0000] px-8 my-16 rounded-md flex items-center">next<span className="text-base ml-1">&gt;</span></button>
+                <button className="bg-[#ff0000] px-8 my-16 rounded-md flex items-center" onClick={()=>{
+                    console.log(planpoint);
+                    console.log(cpoint);
+                    console.log(ppoint);
+                }}>next<span className="text-base ml-1">&gt;</span></button>
             </div>
             
             <Manner/>
