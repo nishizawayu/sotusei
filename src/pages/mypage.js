@@ -31,7 +31,7 @@ export default function Mypage() {
 
     // グラフの数値用
     // テスト用（後で消す）
-    const detaarr = [20,30,50] 
+    const detaarr = [20,90,50] 
 
     // -------------------------------------------------
 
@@ -71,6 +71,19 @@ export default function Mypage() {
         )
     }
 
+    const Graph2 =  (deta1,deta2,deta3) =>{
+        return(
+            <section className='py-4 mt-4'>
+                <div>
+                    <progress className="progress w-56" value={deta1} max="100"></progress>
+                    <progress className="progress progress-accent w-56" value={deta2} max="100"></progress>
+                    <progress className="progress progress-secondary w-56" value={deta3} max="100"></progress>
+                </div>
+            </section>
+        )
+        
+    }
+
     return (
         <section className='w-[90%] mt-8 mx-auto'>
             <div className='flex items-center'>
@@ -98,6 +111,13 @@ export default function Mypage() {
                     3日目
                 </p>
             </div>
+
+            <div>
+                    {
+                        Graph2(detaarr[0],detaarr[1],detaarr[2])
+                    }
+            </div>
+
 
             {/* タブで切り替わるコンテンツ */}
             <div className="mt-4">

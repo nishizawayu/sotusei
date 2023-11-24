@@ -4,9 +4,7 @@ import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 
 export default function From() {
 
-    let deta = 80;
-
-    const [planpoint, setPlanPoint] = useState(3);
+    const [planpoint, setPlanPoint] = useState(80);
     const [cpoint, setCPoint] = useState(3);
     const [ppoint, setPPoint] = useState(3);
       
@@ -132,9 +130,9 @@ export default function From() {
                     <p className="font-bold">企画</p>
                     <p className="font-bold">{planpoint}点</p>
                 </div>
-                <input type="range" min="1" max="5" className="range max-w-xs range-primary mt-4" step="1" defaultValue={planpoint} onChange={(event) => setPlanPoint(event.target.value)}/>
+                <input type="range" min="0" max="100" className="range max-w-xs range-primary mt-4" step="1" defaultValue={planpoint} onChange={(event) => setPlanPoint(event.target.value)}/>
                 <div className="w-full flex justify-between text-xs px-2 max-w-xs">
-                    <p>1</p> <p>2</p> <p>3</p> <p>4</p><p>5</p>
+                    <p>0</p> <p>25</p> <p>50</p> <p>75</p><p>100</p>
                 </div>
             </div>
             
@@ -161,7 +159,7 @@ export default function From() {
             </div>
 
             <div className="font-bold text-2xl flex justify-center">
-                <button className="bg-[#ff0000] px-8 my-16 rounded-md flex items-center" onClick={()=>{
+                <button className="bg-[#00ff00] px-8 my-16 rounded-md flex items-center" onClick={()=>{
                     console.log(planpoint);
                     console.log(cpoint);
                     console.log(ppoint);
